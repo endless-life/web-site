@@ -1,0 +1,576 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+    margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img {
+    border: 0px;
+}
+
+::-moz-selection {
+    background-color: #6ab344;
+    color: #fff;
+}
+
+::selection {
+    background-color: #6ab344;
+    color: #fff;
+}
+
+.endless-search-box .mdl-textfield__input {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.endless-header .mdl-menu__container {
+    z-index: 50;
+    margin: 0 !important;
+}
+
+.mdl-textfield--expandable {
+    width: auto;
+}
+
+.endless-fab {
+    position: absolute;
+    right: 20%;
+    bottom: -26px;
+    z-index: 3;
+    background: #64ffda !important;
+    color: black !important;
+}
+
+.endless-title {
+    color: #767777;
+    display: inline-flex;
+    align-items: center;
+}
+
+.endless-mobile-title {
+    display: none !important;
+    color: #767777;
+    top: auto !important;
+}
+
+.endless-logo-image {
+    height: 28px;
+    margin-right: 8px;
+}
+
+.endless-header {
+    overflow: visible;
+    background-color: white;
+}
+
+.endless-header .material-icons {
+    color: #767777 !important;
+}
+
+.endless-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+}
+
+.endless-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.endless-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.endless-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 800px;
+}
+
+.endless-search-box.is-focused + .endless-navigation-container {
+    opacity: 0;
+    width: 100px;
+}
+
+.endless-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+}
+
+.endless-navigation .mdl-navigation__link:hover {
+    border-bottom: 4px solid #8bc34a;
+}
+
+.endless-search-box {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.endless-more-button {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+.endless-header .mdl-layout__drawer-button {
+    display: none;
+}
+.endless-header .mdl-layout__header-row {
+    padding-left: 40px;
+}
+
+.endless-drawer {
+    border-right: none;
+}
+
+.endless-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+}
+
+.endless-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+}
+
+.endless-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+}
+
+.endless-drawer .mdl-layout-title {
+    position: relative;
+    background: #6ab344;
+    height: 60px;
+    color: white;
+}
+
+.endless-drawer .endless-logo-image {
+    position: absolute;
+    bottom: 16px;
+}
+
+.endless-be-together-section {
+    position: relative;
+    height: 800px;
+    width: auto;
+    background-color: #f3f3f3;
+    /*background: url('../images/slide01.jpg') center 30% no-repeat;*/
+    background: url('https://pre00.deviantart.net/0974/th/pre/i/2018/301/4/8/phisher_s_morning_out_by_spockirkcoy-dcqmdz1.png') center 30% no-repeat;
+    background-size: cover;
+}
+
+.logo-font {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1;
+    /*color: #767777;*/
+    color: white;
+    font-weight: 500;
+}
+
+.endless-slogan {
+    font-size: 60px;
+    padding-top: 160px;
+}
+
+.endless-sub-slogan {
+    font-size: 21px;
+    padding-top: 24px;
+}
+
+.endless-join {
+    font-size: 21px;
+    padding-top: 400px;
+    display: inline-flex;
+}
+
+.endless-join a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+}
+
+.endless-screen-section {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.endless-screens {
+    text-align: right;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.endless-screen {
+    text-align: center;
+}
+
+.endless-screen .endless-link {
+    margin-top: 16px;
+    display: block;
+    z-index: 2;
+}
+
+.endless-image-link {
+    text-decoration: none;
+}
+
+.endless-wear {
+    display: inline-block;
+    width: 160px;
+    margin-right: 32px;
+}
+
+.endless-wear .endless-screen-image {
+    width: 40%;
+    z-index: 1;
+}
+
+.endless-phone {
+    display: inline-block;
+    width: 64px;
+    margin-right: 48px;
+}
+
+.endless-phone .endless-screen-image {
+    width: 100%;
+    z-index: 1;
+}
+
+.endless-tablet {
+    display: inline-block;
+    width: 110px;
+    margin-right: 64px;
+}
+
+.endless-tablet .endless-screen-image {
+    width: 100%;
+    z-index: 1;
+}
+
+.endless-tablet .endless-link {
+    display: block;
+    z-index: 2;
+}
+
+.endless-tv {
+    display: inline-block;
+    width: 300px;
+    margin-right: 80px;
+}
+
+.endless-tv .endless-screen-image {
+    width: 100%;
+    z-index: 1;
+}
+
+.endless-auto {
+    display: inline-block;
+    width: 300px;
+    overflow: hidden;
+}
+
+.endless-auto .endless-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+}
+
+.endless-wear-section {
+    position: relative;
+    background: url('../images/wear.png') center top no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+.endless-wear-band {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #37474f;
+}
+
+.endless-wear-band-text {
+    max-width: 800px;
+    margin-left: 25%;
+    padding: 24px;
+    text-align: left;
+    color: white;
+}
+
+.endless-wear-band-text p {
+    padding-top: 8px;
+}
+
+.endless-link {
+    text-decoration: none;
+    color: #8bc34a !important;
+}
+
+.endless-link:hover {
+    color: #7cb342 !important;
+}
+
+.endless-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
+
+.endless-alt-link {
+    text-decoration: none;
+    color: #64ffda !important;
+    font-size: 16px;
+}
+
+.endless-alt-link:hover {
+    color: #00bfa5 !important;
+}
+
+.endless-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+.endless-customized-section {
+    text-align: center;
+}
+
+.endless-customized-section-text {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px 16px 0 16px;
+}
+
+.endless-customized-section-text p {
+    padding-top: 16px;
+}
+
+.endless-customized-section-image {
+    background: url('../images/devices.jpg') center top no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.endless-more-section {
+    padding: 80px 0;
+    max-width: 1044px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.endless-more-section .endless-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+}
+
+.endless-card-container {
+}
+
+.endless-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+}
+
+.endless-card-container .mdl-card__media img {
+    width: 100%;
+}
+
+.endless-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+}
+
+.endless-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+}
+
+.endless-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+}
+
+.endless-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+}
+
+.endless-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+}
+
+.endless-footer {
+    background-color: #fafafa;
+    position: relative;
+}
+
+.endless-footer a:hover {
+    color: #8bc34a;
+}
+
+.endless-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+}
+
+.endless-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+}
+
+.endless-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+}
+
+.endless-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+}
+
+.endless-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+}
+
+.endless-footer .mdl-mega-footer--social-btn {
+    background-image: url(../images/social-buttons.png);
+    background-color: transparent;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+
+.endless-footer .mdl-mega-footer--social-btn.qq {
+    background-position: -36px -4px;
+}
+.endless-footer .mdl-mega-footer--social-btn.weibo {
+    background-position: -4px -4px;
+}
+.endless-footer .mdl-mega-footer--social-btn.douban {
+    background-position: -67px -4px;
+}
+.endless-footer .mdl-mega-footer--social-btn.taobao {
+    background-position: -100px -4px;
+}
+
+.endless-link-menu:hover {
+    cursor: pointer;
+}
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+    .endless-header .mdl-layout__drawer-button {
+        display: block;
+    }
+    .endless-header .mdl-layout__header-row {
+        padding-left: 80px;
+    }
+    .endless-navigation-container {
+        display: none;
+    }
+
+    .endless-title {
+        display: none !important;
+    }
+
+    .endless-mobile-title {
+        display: block !important;
+        position: absolute;
+        left: calc(50% - 29px);
+        top: 12px;
+        transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+       consecutive "+" operators in some cases. Therefore, we need to use both
+       here to cover all the bases. */
+    .endless.endless-search-box.is-focused ~ .endless-mobile-title,
+    .endless-search-box.is-focused + .endless-navigation-container + .endless-mobile-title {
+        opacity: 0;
+    }
+
+    .endless-more-button {
+        display: none;
+    }
+
+    .endless-search-box.is-focused {
+        width: calc(100% - 48px);
+    }
+
+    .endless-search-box .mdl-textfield__expandable-holder {
+        width: 100%;
+    }
+
+    .endless-be-together-section {
+        height: 350px;
+    }
+
+    .endless-slogan {
+        font-size: 26px;
+        margin: 0 16px;
+        padding-top: 24px;
+    }
+
+    .endless-sub-slogan {
+        font-size: 16px;
+        margin: 0 16px;
+        padding-top: 8px;
+    }
+
+    .endless-create-character {
+        padding-top: 200px;
+        font-size: 16px;
+    }
+
+    .endless-create-character img {
+        height: 12px;
+    }
+
+    .endless-fab {
+        display: none;
+    }
+
+    .endless-wear-band-text {
+        margin-left: 0;
+        padding: 16px;
+    }
+
+    .endless-footer .mdl-mega-footer--bottom-section {
+        display: none;
+    }
+}
