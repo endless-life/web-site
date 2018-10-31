@@ -14,6 +14,19 @@
  * limitations under the License.
  */
 
+@font-face {
+    font-family: 'FZLTXIHJW_3445390352';
+    src: url('../fonts/FZLTXIHJW_3445390352.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/FZLTXIHJW_3445390352.iefix.eot') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/FZLTXIHJW_3445390352.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/FZLTXIHJW_3445390352.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Lanting';
+    src: url('../fonts/方正兰亭细黑_GBK_M.TTF') format('truetype');
+}
+
 body {
     margin: 0;
 }
@@ -60,7 +73,12 @@ a img {
     display: inline-flex;
     align-items: center;
 }
-
+.endless-title a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
 .endless-mobile-title {
     display: none !important;
     color: #767777;
@@ -146,6 +164,7 @@ a img {
 .endless-header .mdl-layout__drawer-button {
     display: none;
 }
+
 .endless-header .mdl-layout__header-row {
     padding-left: 40px;
 }
@@ -202,18 +221,20 @@ a img {
     z-index: 1;
     /* filter: blur(6px); */
 }
+
 .container {
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #00000029;
+    background-color: #00000080;
+    background-color: rgba(0, 0, 0, 0.50);
     z-index: 2;
 }
 
 .logo-font {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Lanting', 'Roboto', 'Helvetica', 'Arial', sans-serif;
     line-height: 1;
     /*color: #767777;*/
     color: white;
@@ -224,16 +245,17 @@ a img {
     font-size: 6rem;
     padding-top: 80px;
     padding-bottom: 40px;
-    color: #ffffffcc;
-    color: rgba(255, 255, 255, 0.80);
+    color: #ffffffeb;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: calc(0.5rem + 0.7vw);
 }
 
 .endless-sub-slogan {
     font-size: 21px;
     padding-top: 24px;
     letter-spacing: calc(0.9rem + 1.8vw);
-    color: #ffffffb3;
-    color: rgba(255, 255, 255, 0.7);
+    color: #ffffff8a;
+    color: rgba(255, 255, 255, 0.53);
 }
 
 .endless-join {
@@ -505,12 +527,15 @@ a img {
 .endless-footer .mdl-mega-footer--social-btn.qq {
     background-position: -36px -4px;
 }
+
 .endless-footer .mdl-mega-footer--social-btn.weibo {
     background-position: -4px -4px;
 }
+
 .endless-footer .mdl-mega-footer--social-btn.douban {
     background-position: -67px -4px;
 }
+
 .endless-footer .mdl-mega-footer--social-btn.taobao {
     background-position: -100px -4px;
 }
@@ -524,9 +549,11 @@ a img {
     .endless-header .mdl-layout__drawer-button {
         display: block;
     }
+
     .endless-header .mdl-layout__header-row {
         padding-left: 80px;
     }
+
     .endless-navigation-container {
         display: none;
     }
