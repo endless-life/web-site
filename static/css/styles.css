@@ -185,10 +185,31 @@ a img {
     position: relative;
     height: 800px;
     width: auto;
+    overflow: hidden;
+}
+
+.mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     background-color: #f3f3f3;
     /*background: url('../images/slide01.jpg') center 30% no-repeat;*/
     background: url('https://files.life.yotaku.cn/static/images/endless_by_osiris81.jpg') center 30% no-repeat;
     background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+    /* filter: blur(6px); */
+}
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000029;
+    z-index: 2;
 }
 
 .logo-font {
@@ -200,13 +221,19 @@ a img {
 }
 
 .endless-slogan {
-    font-size: 60px;
-    padding-top: 160px;
+    font-size: 6rem;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    color: #ffffffcc;
+    color: rgba(255, 255, 255, 0.80);
 }
 
 .endless-sub-slogan {
     font-size: 21px;
     padding-top: 24px;
+    letter-spacing: calc(0.9rem + 1.8vw);
+    color: #ffffffb3;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .endless-join {
@@ -543,7 +570,7 @@ a img {
     .endless-slogan {
         font-size: 26px;
         margin: 0 16px;
-        padding-top: 24px;
+        padding-top: 60px;
     }
 
     .endless-sub-slogan {
