@@ -13,18 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-@font-face {
-    font-family: 'FZLTXIHJW_3445390352';
-    src: url('../fonts/FZLTXIHJW_3445390352.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/FZLTXIHJW_3445390352.iefix.eot') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/FZLTXIHJW_3445390352.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/FZLTXIHJW_3445390352.ttf') format('truetype'); /* Safari, Android, iOS */
-}
-
 @font-face {
     font-family: 'Lanting';
-    src: url('../fonts/方正兰亭细黑_GBK_M.TTF') format('truetype');
+    src: url('https://files.life.yotaku.cn/static/fonts/方正兰亭细黑_GBK_M.TTF') format('truetype');
 }
 
 body {
