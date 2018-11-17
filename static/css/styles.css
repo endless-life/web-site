@@ -15,7 +15,7 @@
  */
 @font-face {
     font-family: 'Lanting';
-    src: url('https://files.life.yotaku.cn/static/fonts/方正兰亭细黑_GBK_M.TTF') format('truetype');
+    src: url('https://files.life.yotaku.cn/static/fonts/%e6%96%b9%e6%ad%a3%e5%85%b0%e4%ba%ad%e7%bb%86%e9%bb%91_GBK_M.TTF') format('truetype');
 }
 
 body {
@@ -582,7 +582,7 @@ a img {
     }
 
     .endless-be-together-section {
-        height: 350px;
+        height: 600px;
     }
 
     .endless-slogan {

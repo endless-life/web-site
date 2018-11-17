@@ -5,15 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>无限之生 - Endless Life</title>
-    <link href="./static/images/favicon.png" rel="icon">
-    <link href="./static/images/endless.png" rel="icon" sizes="200x110">
+    <link href="https://files.life.yotaku.cn/static/images/favicon.png" rel="icon">
+    <link href="https://files.life.yotaku.cn/static/images/endless.png" rel="icon" sizes="200x110">
     <meta name="description" content="“无限之生”的使命是永久解决人类面临的一切问题，理想方案是通过思维数据化技术实现生命形式的转变，使人类在零维空间中达到永生，目前还没有具体实施细节。">
     <meta name="keywords"
           content="无限之生,endless life,永生计划,灵魂数字化,人脑数字化,意识数字化,大脑上传,思维上传,思想存档,大脑上传,超人类主义,超人文主义,超人主义,transhumanism,无限之生的界线">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="./static/css/material.min.css">
-    <link rel="stylesheet" href="./static/css/styles.css">
-    <script defer src="./static/js/material.min.js"></script>
+    <link rel="stylesheet" href="https://files.life.yotaku.cn/static/css/material.min.css">
+    <link rel="stylesheet" href="https://files.life.yotaku.cn/static/css/styles.css">
+    <link rel="stylesheet" href="https://files.life.yotaku.cn/static/dplayer/DPlayer.min.css">
+    <script defer src="https://files.life.yotaku.cn/static/js/material.min.js"></script>
+    <script src="https://files.life.yotaku.cn/static/dplayer/DPlayer.min.js"></script>
+    <script src="https://files.life.yotaku.cn/static/dplayer/hls.min.js"></script>
+    <style>
+        #dplayer{
+            width: 340px;
+            height: 240px;
+            max-width: 100%;
+            margin: auto;
+            margin-top: 60px;
+        }
+
+    </style>
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -86,6 +99,9 @@
                 <div class="logo-font endless-sub-slogan">
                     跨越无限之生的界线
                 </div>
+
+                <div id="dplayer"></div>
+
             </div>
             <!--<div class="logo-font endless-join">-->
             <!--<a href=""><img src="./static/images/endless-grey.png" style="width: 37px;">加入无限之生</a>-->
@@ -148,6 +164,16 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
+
+    var dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        hotkey: true,
+        video: {
+            url: 'https://files.life.yotaku.cn/Star Size Comparison 2.mp4',
+            theme: 'rgba(39, 11, 76, 0.9)',
+            pic: 'https://files.life.yotaku.cn/static/images/Star Size Comparison 2.webp'
+        },
+    });
 </script>
 
 </body>
